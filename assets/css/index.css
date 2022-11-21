@@ -1,0 +1,19 @@
+@import 'https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Red+Hat+Display:wght@700&display=swap';
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Red Hat Display', sans-serif;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}

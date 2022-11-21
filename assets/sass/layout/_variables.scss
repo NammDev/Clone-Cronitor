@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Red+Hat+Display:wght@700&display=swap');
+
+/* Colors */
+$color-primary: #fa5652;
+$color-secondary: #035755;
+$color-text: #4b4f51;
+$color-text-secondary: white;
+$color-primary-light: #fee6e5;
+$color-bg: #fff9f9;
+
+/* Font Styles */
+$font-primary: 'Red Hat Display', sans-serif;
+$font-secondary: 'Domine', serif;
+
+/* Spacing */
+$padding-base: 1rem;
+$margin-base: 1rem;
+
+/* Border Radius */
+$border-radius-btn: 100px;
+
+/* box-shadow */
+$box-shadow-btn: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+
+/* Animation */
+$transition-smooth: all 0.3s ease-in;

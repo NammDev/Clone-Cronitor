@@ -1,0 +1,17 @@
+{
+  "name": "cronitor",
+  "version": "1.0.0",
+  "description": "Using HTML & SASS to clone Cronotior for study purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nam",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  }
+}
