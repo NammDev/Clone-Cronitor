@@ -1,9 +1,14 @@
+// Base
 @import './layout/variables';
-
 @import './layout/base';
 @import './layout/grid';
 
-@import './page/header';
-@import './main';
+// Mixin, Placeholder, Keyframes
+@import './component/mixin';
+@import './component/function';
 
-@import './responsive';
+// Responsive
+@import './layout/responsive';
+
+// Main Page
+@import './page/main';

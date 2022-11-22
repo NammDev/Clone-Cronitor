@@ -1,0 +1,255 @@
+/* Header */
+.header {
+  position: relative;
+  height: 0;
+  > .grid {
+    z-index: 20;
+    position: relative;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.04);
+    background-color: white;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 32px;
+
+  &__logo {
+    a {
+      img {
+        margin-left: -2px;
+        padding-bottom: 2px;
+        height: 28px;
+        transition: $transition-smooth;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: inline-flex;
+    margin-left: 56px;
+    .navbar__link {
+      @extend %navbar__link;
+      &:first-child {
+        margin-left: 0;
+      }
+      svg {
+        margin-left: 8px;
+        width: 16px;
+      }
+    }
+    @include bp(mamababy) {
+      display: none;
+    }
+  }
+
+  &__login {
+    display: inline-flex;
+    margin-left: auto;
+    &-signin {
+      @extend %navbar__link;
+    }
+    &-free {
+      @include button(1rem 2.4rem, 1.6rem, 2.4rem);
+      margin-left: 24px;
+    }
+  }
+}
+
+.product-tray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  background-color: white;
+  color: rgba(68, 68, 72, 1);
+  box-shadow: 2px 36px 89px rgba(8, 33, 96, 0.3);
+  display: none;
+
+  &.open {
+    display: block;
+    animation: slowShow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .grid {
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 32px;
+    .row {
+      margin: 0;
+      .col {
+        padding: 0;
+      }
+    }
+  }
+
+  .product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 48px 32px;
+    text-align: center;
+    transition: $transition-smooth;
+    &:hover {
+      background-color: rgba(245, 246, 250, 1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 1px;
+      height: 78%;
+      opacity: 0.75;
+      background-color: rgb(225, 226, 230);
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &.hide-separate::after {
+      display: none;
+    }
+
+    &__img {
+      flex: 1 1 0;
+    }
+
+    &__title {
+      display: inline-block;
+      margin-top: 24px;
+      color: $color-text;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    &__desc {
+      margin-top: 12px;
+    }
+
+    &__learn {
+      display: inline-block;
+      margin-top: 16px;
+      color: $color-text;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Banner */
+.banner {
+  position: relative;
+}
+
+.banner__hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @include bp(mamababy) {
+    display: none;
+  }
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 256px 0 224px 0;
+  gap: 48px;
+  @include bp(mamababy) {
+    flex-direction: column;
+    padding: 0;
+  }
+  .banner__container {
+    max-width: 48.125%;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h1 {
+      @include text($color-text, 900, 48px, 48px);
+      margin-top: 8px;
+    }
+    p {
+      @include text($color-text-secondary, 500, 20px, 28px);
+      margin-top: 16px;
+    }
+    div {
+      margin-top: 32px;
+      a {
+        @include button(1.6rem 3.6rem, 2rem, 2.8rem);
+      }
+    }
+    @include bp(mama) {
+      padding: 128px 0 48px 32px;
+      max-width: 576px;
+    }
+    @include bp(baby) {
+    }
+  }
+
+  .banner__img {
+    max-width: 48.125%;
+    flex: 1;
+    padding: 0 32px;
+
+    .position {
+      position: relative;
+      margin: 0 20px;
+    }
+
+    &-feed {
+      width: 512px;
+      height: 320px;
+      img {
+        width: unset;
+        filter: drop-shadow(-7px 7px 12px rgba(97, 97, 97, 0.1));
+      }
+    }
+
+    &-noti {
+      position: absolute;
+      top: -32px;
+      right: -16px;
+      &-bottom {
+        margin-top: -16px;
+      }
+    }
+    @include bp(mama) {
+      padding: 64px 32px 48px 32px;
+      max-width: 100%;
+      background-color: $color-primary;
+    }
+    @include bp(baby) {
+    }
+  }
+}

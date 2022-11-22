@@ -14,15 +14,30 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(249, 250, 254);
+  color: rgb(68, 68, 72);
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  overflow-x: hidden;
+}
+
 ul {
   list-style-type: none;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
   width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
 }

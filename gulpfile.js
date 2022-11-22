@@ -5,7 +5,7 @@ const purgecss = require('gulp-purgecss')
 function buildStyles() {
   return src('assets/sass/**/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(purgecss({ content: ['*.html'], safelist: ['open'] }))
+    .pipe(purgecss({ content: ['*.html'], safelist: ['open', 'close'] }))
     .pipe(dest('assets/css'))
 }
 

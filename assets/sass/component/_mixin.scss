@@ -1,0 +1,47 @@
+@mixin button($p, $fs, $lh) {
+  display: inline-flex;
+  align-items: center;
+
+  padding: $p;
+  border: 2px solid $color-primary;
+  border-radius: 9999px;
+  box-shadow: $box-shadow-btn;
+
+  background-color: $color-primary;
+  color: white;
+
+  font-family: $font-primary;
+  font-size: $fs;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: $lh;
+
+  cursor: pointer;
+  transition: $transition-smooth;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin text($c, $fs, $fw, $lh) {
+  color: $c;
+  font-weight: $fs;
+  font-size: $fw;
+  line-height: $lh;
+}
+
+%navbar__link {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  color: $color-text;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: $transition-smooth;
+  &:hover {
+    color: rgb(68, 68, 72);
+  }
+}
