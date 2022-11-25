@@ -1,33 +1,73 @@
-@mixin bp($p) {
-  @if $p == baby {
-    @media (max-width: 46.1875em) {
-      @content;
+/* Tablet & Mobile >= 740px */
+@media only screen and (max-width: 63.9375em) {
+  .banner__content {
+    flex-direction: column;
+    padding: 0;
+    .banner__img {
+      padding: 64px 32px 48px 32px;
+      width: 100%;
+      max-width: 100%;
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(81, 23, 226),
+        rgb(70, 0, 205)
+      );
     }
-  } @else if $p == mama {
-    @media (min-width: 46.25em) and (max-width: 63.9375em) {
-      @content;
-    }
-  } @else if $p == mamababy {
-    @media (max-width: 63.9375em) {
-      @content;
-    }
-  } @else if $p == papa {
-    @media (min-width: 64em) {
-      @content;
+  }
+  .trusted {
+    .trusted__content-row {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
 
-/* Tablet & Mobile >= 740px */
-@media only screen and (max-width: 63.9375em) {
-}
-
 /* Tablet: width >= 740px and width < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .banner__content {
+    .banner__container {
+      padding: 128px 0 48px 32px;
+      max-width: 576px;
+    }
+    .banner__img {
+      .position {
+        max-width: 512px;
+        margin: 0 96px;
+      }
+    }
+  }
 }
 
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
+  .banner__content {
+    .banner__container {
+      padding: 128px 20px 48px 20px;
+      width: 100%;
+      max-width: 100%;
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      div {
+        display: flex;
+        width: 100%;
+        a {
+          flex: 1;
+        }
+      }
+    }
+    .banner__img {
+      .position {
+        max-width: 326px;
+        margin: 0;
+        .banner__img-feed {
+          width: 100%;
+          height: 320px;
+        }
+      }
+    }
+  }
 }
 
 /* PC: width >= 1024 */

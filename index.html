@@ -51,6 +51,385 @@
             <a class="navbar__login-signin" href="">Sign In</a>
             <a class="navbar__login-free" href="#">Start for free</a>
           </div>
+          <button class="navbar__ham">
+            <div class="navbar__ham-icon"></div>
+          </button>
+        </div>
+      </div>
+      <div class="nav-mobile">
+        <div class="nav-mobile-top">
+          <button class="nav-mobile__dropdown">
+            <span>Product</span>
+            <svg
+              :class="{ 'rotate-90': productTrayIsOpen }"
+              class="w-6 h-6 transform-gpu transition-transform rotate-90"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+          <div class="nav-mobile__product-tray">
+            <div class="container">
+              <a class="product-item-mb">
+                <div class="product-item-mb__img">
+                  <svg
+                    fill="none"
+                    height="135"
+                    width="135"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="67.5"
+                      cy="67.5"
+                      fill="#f5f6fa"
+                      r="67.5"
+                    ></circle>
+                    <g stroke="#041749" stroke-miterlimit="10" stroke-width="3">
+                      <path
+                        d="m90.409 53.872h-56.573a2.681 2.681 0 0 1 -2.677-2.688v-9.195a2.681 2.681 0 0 1 2.677-2.688h56.644a2.681 2.681 0 0 1 2.677 2.688v9.195c-.07 1.485-1.268 2.688-2.747 2.688z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="m97.665 74.88h-56.643a2.681 2.681 0 0 1 -2.677-2.689v-9.195a2.681 2.681 0 0 1 2.677-2.688h56.643a2.681 2.681 0 0 1 2.677 2.688v9.195c-.07 1.486-1.197 2.688-2.677 2.688z"
+                        fill="#00F159"
+                      ></path>
+                      <path
+                        d="m90.409 95.816h-56.573a2.681 2.681 0 0 1 -2.677-2.688v-9.195a2.681 2.681 0 0 1 2.677-2.688h56.644a2.681 2.681 0 0 1 2.677 2.688v9.195c-.07 1.485-1.268 2.688-2.747 2.688z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="m96.96 107.486c10.351 0 18.741-8.423 18.741-18.814s-8.39-18.815-18.74-18.815-18.74 8.424-18.74 18.815c0 10.39 8.39 18.814 18.74 18.814z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="m96.75 76.294v13.368l8.595-5.376"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="m97.595 91.218c1.4 0 2.536-1.14 2.536-2.546a2.541 2.541 0 0 0 -2.536-2.547c-1.4 0-2.536 1.14-2.536 2.547a2.541 2.541 0 0 0 2.536 2.546z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="m83.716 88.53h.352m26.419 0h.353m-13.527 13.581v-.354"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="product-item-mb__content">
+                  <span class="product-item-mb__title">Jobs</span>
+                  <p class="product-item-mb__desc">
+                    Monitor the status, metrics and logs from your cron jobs and
+                    background tasks.
+                  </p>
+                </div>
+              </a>
+              <a class="product-item-mb">
+                <div class="product-item-mb__img">
+                  <svg
+                    fill="none"
+                    height="135"
+                    width="135"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <clipPath id="a">
+                      <path
+                        d="m0 0h73.885v73.885h-73.885z"
+                        transform="translate(31.014 30.101)"
+                      ></path>
+                    </clipPath>
+                    <circle
+                      cx="67.5"
+                      cy="67.5"
+                      fill="#f5f6fa"
+                      r="67.5"
+                    ></circle>
+                    <g clip-path="url(#checks)">
+                      <g
+                        stroke="#041749"
+                        stroke-miterlimit="10"
+                        stroke-width="3"
+                      >
+                        <path
+                          d="m67.956 102.162c19.395 0 35.118-15.723 35.118-35.118s-15.723-35.118-35.118-35.118-35.118 15.723-35.118 35.118 15.723 35.118 35.118 35.118z"
+                          fill="#fff"
+                        ></path>
+                        <g stroke-linecap="round">
+                          <path
+                            d="m87.98 90.216a1.324 1.324 0 1 0 0-2.648 1.324 1.324 0 0 0 0 2.648zm-1.751-45.682a1.324 1.324 0 1 0 0-2.648 1.324 1.324 0 0 0 0 2.648zm-28.005 8.673a1.324 1.324 0 1 0 0-2.648 1.324 1.324 0 0 0 0 2.648z"
+                            fill="#041749"
+                          ></path>
+                          <path
+                            d="m49.352 81.145a1.324 1.324 0 1 0 0-2.648 1.324 1.324 0 0 0 0 2.648z"
+                          ></path>
+                        </g>
+                      </g>
+                      <path
+                        d="m69.016 103.192-.663-36.413-36.427-.647s2.133 18.324 11.667 26.997c9.533 8.739 25.422 10.063 25.422 10.063z"
+                        fill="#00F159"
+                      ></path>
+                      <g stroke="#041749" stroke-miterlimit="10">
+                        <path
+                          d="m55.443 95.578a1.324 1.324 0 1 0 0-2.648 1.324 1.324 0 0 0 0 2.648zm-3.31-18.538a1.324 1.324 0 1 0 0-2.647 1.324 1.324 0 0 0 0 2.648z"
+                          fill="#041749"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                        <path
+                          d="m67.956 91.142c13.31 0 24.099-10.789 24.099-24.098 0-13.31-10.79-24.099-24.099-24.099-13.31 0-24.099 10.79-24.099 24.099 0 13.31 10.79 24.099 24.1 24.099z"
+                          stroke-width="3"
+                        ></path>
+                        <path
+                          d="m67.824 68.898a1.854 1.854 0 1 0 0-3.708 1.854 1.854 0 0 0 0 3.708z"
+                          fill="#041749"
+                          stroke-width="1.5"
+                        ></path>
+                        <g stroke-width="3">
+                          <path
+                            d="m67.956 78.762c6.472 0 11.718-5.246 11.718-11.718s-5.246-11.719-11.718-11.719-11.718 5.247-11.718 11.719 5.246 11.718 11.718 11.718z"
+                          ></path>
+                          <path
+                            d="m67.956 102.162c19.395 0 35.118-15.723 35.118-35.118s-15.723-35.118-35.118-35.118-35.118 15.723-35.118 35.118 15.723 35.118 35.118 35.118z"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="product-item-mb__content">
+                  <span class="product-item-mb__title">Checks</span>
+                  <p class="product-item-mb__desc">
+                    Uptime and performance monitoring for websites and APIs,
+                    done right.
+                  </p>
+                </div>
+              </a>
+              <a class="product-item-mb">
+                <div class="product-item-mb__img">
+                  <svg
+                    fill="none"
+                    height="135"
+                    width="135"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <clipPath id="a">
+                      <path
+                        d="m0 0h95.777v64.763h-95.777z"
+                        transform="translate(20.068 34.662)"
+                      ></path>
+                    </clipPath>
+                    <circle
+                      cx="67.5"
+                      cy="67.5"
+                      fill="#f5f6fa"
+                      r="67.5"
+                    ></circle>
+                    <g clip-path="url(#beats)">
+                      <path
+                        d="m20.068 34.662h95.777v64.763h-95.777z"
+                        fill="#fff"
+                      ></path>
+                      <g stroke="#041749" stroke-miterlimit="10">
+                        <path
+                          d="m104.615 93.441h-73.317c-2.861 0-5.222-2.351-5.222-5.201v-42.392c0-2.85 2.36-5.201 5.222-5.201h73.317c2.861 0 5.221 2.351 5.221 5.201v42.463c0 2.779-2.36 5.13-5.221 5.13z"
+                          fill="#00F159"
+                          stroke-width="3"
+                        ></path>
+                        <path
+                          d="m105.33 98.357h-74.748c-5.221 0-9.513-4.204-9.513-9.476v-43.745c0-5.202 4.22-9.476 9.513-9.476h74.748c5.222 0 9.513 4.203 9.513 9.476v43.816c-.071 5.201-4.291 9.405-9.513 9.405z"
+                          stroke-width="2.88"
+                        ></path>
+                        <path
+                          d="m42.67 70.998h14.092l4.006-8.835 4.434 20.876 7.296-31.349 4.793 19.664h13.733"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="product-item-mb__content">
+                  <span class="product-item-mb__title">Heartbeats</span>
+                  <p class="product-item-mb__desc">
+                    Keep a constant pulse on the health of your infrastructure
+                    using a simple heartbeat.
+                  </p>
+                </div>
+              </a>
+              <a class="product-item-mb">
+                <div class="product-item-mb__img">
+                  <svg
+                    width="135"
+                    height="135"
+                    viewBox="0 0 135 135"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M67.5 135C104.779 135 135 104.779 135 67.5C135 30.2208 104.779 0 67.5 0C30.2208 0 0 30.2208 0 67.5C0 104.779 30.2208 135 67.5 135Z"
+                      fill="#F5F6FA"
+                    ></path>
+                    <path
+                      d="M41.4833 36.2893V35.7893H40.9833H32.9916C31.2538 35.7893 29.8278 37.1999 29.8278 38.934V46.868V47.368H30.3278H40.9833H41.4833V46.868V36.2893ZM30.3278 51.6573H29.8278V52.1573V97.1165C29.8278 98.8506 31.2538 100.261 32.9916 100.261H102.253C103.99 100.261 105.416 98.8506 105.416 97.1165V52.1573V51.6573H104.916H30.3278ZM104.916 47.368H105.416V46.868V38.934C105.416 37.1999 103.99 35.7893 102.253 35.7893H46.311H45.811V36.2893V46.868V47.368H46.311H104.916ZM32.9916 31.5H102.253C106.392 31.5 109.744 34.8333 109.744 38.934V97.1165C109.744 101.217 106.392 104.551 102.253 104.551H32.9916C28.8523 104.551 25.5 101.217 25.5 97.1165V38.934C25.5 34.8333 28.8523 31.5 32.9916 31.5Z"
+                      fill="black"
+                      stroke="#F5F6FA"
+                    ></path>
+                    <rect
+                      x="32.7495"
+                      y="55.1095"
+                      width="68.8842"
+                      height="15.4989"
+                      rx="2.07451"
+                      fill="#00F159"
+                    ></rect>
+                    <path
+                      d="M66.5551 68.7459C66.4053 68.8965 66.2022 68.9811 65.9904 68.9811C65.7787 68.9811 65.5756 68.8965 65.4258 68.7459L60.2338 63.5241C60.0841 63.3735 60 63.1692 60 62.9563C60 62.7433 60.0841 62.539 60.2338 62.3884L61.363 61.2521C61.4372 61.1775 61.5253 61.1183 61.6222 61.0779C61.7191 61.0376 61.823 61.0168 61.9279 61.0168C62.0328 61.0168 62.1367 61.0376 62.2336 61.0779C62.3306 61.1183 62.4186 61.1775 62.4928 61.2521L65.9904 64.7698L73.4819 57.2354C73.5561 57.1607 73.6442 57.1016 73.7411 57.0612C73.838 57.0208 73.9419 57 74.0468 57C74.1517 57 74.2556 57.0208 74.3525 57.0612C74.4495 57.1016 74.5375 57.1607 74.6117 57.2354L75.741 58.3716C75.8907 58.5223 75.9747 58.7265 75.9747 58.9395C75.9747 59.1525 75.8907 59.3567 75.741 59.5074L66.5551 68.7459Z"
+                      fill="black"
+                    ></path>
+                    <rect
+                      x="32.7495"
+                      y="74.9137"
+                      width="68.8842"
+                      height="15.4989"
+                      rx="2.07451"
+                      fill="#DBDCDE"
+                    ></rect>
+                    <path
+                      d="M33 98.0745C33 96.9288 33.9288 96 35.0745 96H99.9255C101.071 96 102 96.9288 102 98.0745V101H33V98.0745Z"
+                      fill="#DBDCDE"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="product-item-mb__content">
+                  <span class="product-item-mb__title">Status Pages</span>
+                  <p class="product-item-mb__desc">
+                    Communicate service reliability and downtime to your
+                    customers and internal teams.
+                  </p>
+                </div>
+              </a>
+              <a class="product-item-mb">
+                <div class="product-item-mb__img">
+                  <svg
+                    width="135"
+                    height="135"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1502_365)">
+                      <path
+                        d="M67.5 135C104.779 135 135 104.779 135 67.5C135 30.2208 104.779 0 67.5 0C30.2208 0 0 30.2208 0 67.5C0 104.779 30.2208 135 67.5 135Z"
+                        fill="#F5F6FA"
+                      ></path>
+                      <path
+                        d="M106 63.8137L106 102.186C106 103.189 104.019 104 101.573 104L86.4272 104C83.9805 104 82 103.189 82 102.186L82 63.8137C82 62.8114 83.9805 62 86.4272 62L101.573 62C104.019 62.0478 106 62.8114 106 63.8137Z"
+                        fill="#DBDCDE"
+                      ></path>
+                      <path
+                        d="M57 87.7341L57 103.266C57 103.672 55.2669 104 53.1262 104L39.8738 104C37.733 104 36 103.672 36 103.266L36 87.7341C36 87.3284 37.733 87 39.8738 87L53.1262 87C55.2669 87.0193 57 87.3284 57 87.7341Z"
+                        fill="#DBDCDE"
+                      ></path>
+                      <path
+                        d="M57 79.1227L57 102.877C57 103.498 58.8982 104 61.2427 104L75.7573 104C78.102 104 80 103.498 80 102.877L80 79.1227C80 78.5023 78.102 78 75.7573 78L61.2427 78C58.8982 78.0296 57 78.5023 57 79.1227Z"
+                        fill="#DBDCDE"
+                      ></path>
+                      <path
+                        d="M42 86.7977L42 103.223C42 103.652 41.0097 104 39.7864 104L32.2136 104C30.9903 104 30 103.652 30 103.223L30 86.7773C30 86.3477 30.9903 86 32.2136 86L39.7864 86C41.0097 86.0205 42 86.3682 42 86.7977Z"
+                        fill="white"
+                        stroke="#131A26"
+                        stroke-width="3"
+                        stroke-miterlimit="10"
+                      ></path>
+                      <path
+                        d="M63 78.1659L63 102.834C63 103.478 61.9271 104 60.6019 104L52.3981 104C51.0728 104 50 103.478 50 102.834L50 78.1659C50 77.5216 51.0728 77 52.3981 77L60.6019 77C61.9271 77.0307 63 77.5216 63 78.1659Z"
+                        fill="white"
+                        stroke="#131A26"
+                        stroke-width="3"
+                        stroke-miterlimit="10"
+                      ></path>
+                      <path
+                        d="M106 63.8137L106 102.186C106 103.189 104.927 104 103.602 104L95.3981 104C94.0728 104 93 103.189 93 102.186L93 63.8137C93 62.8114 94.0728 62 95.3981 62L103.602 62C104.927 62.0478 106 62.8114 106 63.8137Z"
+                        fill="white"
+                        stroke="#131A26"
+                        stroke-width="3"
+                        stroke-miterlimit="10"
+                      ></path>
+                      <path
+                        d="M85 53.3488L85 101.711C85 102.976 83.9271 104 82.6019 104L74.3981 104C73.0728 104 72 102.976 72 101.711L72 53.2887C72 52.0239 73.0728 51 74.3981 51L82.6019 51C83.9271 51.0603 85 52.0841 85 53.3488Z"
+                        fill="#00FC8F"
+                        stroke="#131A26"
+                        stroke-width="3"
+                        stroke-miterlimit="10"
+                      ></path>
+                      <path
+                        d="M35.5 76.5L78 37L99.5 48.5"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-dasharray="3 3"
+                      ></path>
+                      <circle
+                        cx="35.5"
+                        cy="76.5"
+                        r="3"
+                        fill="#F5F6FA"
+                        stroke="black"
+                        stroke-width="3"
+                      ></circle>
+                      <circle
+                        cx="78"
+                        cy="37"
+                        r="4.5"
+                        fill="#00FC8F"
+                        stroke="black"
+                        stroke-width="3"
+                      ></circle>
+                      <circle
+                        cx="99.5"
+                        cy="48.5"
+                        r="3"
+                        fill="white"
+                        stroke="black"
+                        stroke-width="3"
+                      ></circle>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1502_365">
+                        <rect width="135" height="135" fill="white"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="product-item-mb__content">
+                  <span class="product-item-mb__title"
+                    >Real User Monitoring</span
+                  >
+                  <p class="product-item-mb__desc">
+                    Measure your website's most important metrics and deliver a
+                    great end user experience.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="" class="nav-mobile-top__link">Pricing</a>
+          <a href="" class="nav-mobile-top__link">Customer</a>
+          <a href="" class="nav-mobile-top__link">Docs</a>
+        </div>
+        <div class="nav-mobile-bottom">
+          <a href="#" class="nav-mobile-bottom__start">Start For Free</a>
+          <a href="#" class="nav-mobile-bottom__login">Login</a>
         </div>
       </div>
       <div class="product-tray">
@@ -472,6 +851,105 @@
         </div>
       </div>
     </section>
+
+    <section class="trusted">
+      <h2 class="trusted__title">Trusted At</h2>
+      <div class="trusted__content">
+        <div class="trusted__content-row">
+          <div class="trusted__content-col">
+            <img src="./assets/img/trust_1.png" alt="" />
+          </div>
+          <div class="trusted__content-col">
+            <svg
+              height="45"
+              width="122.88"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 122.88 64.77"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #444;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M60.58,43.33c-0.16-0.04-2.63-0.68-5.25-0.68c-4.97,0-7.96,2.68-7.96,6.68c0,3.54,2.5,5.3,5.5,6.25 c0.33,0.11,0.82,0.26,1.15,0.37c1.34,0.42,2.4,1.05,2.4,2.13c0,1.21-1.23,1.99-3.91,1.99c-2.36,0-4.61-0.67-5.09-0.79v4.91 c0.27,0.06,2.95,0.58,5.82,0.58c4.12,0,8.84-1.8,8.84-7.16c0-2.6-1.59-5-5.09-6.11l-1.49-0.47c-0.89-0.28-2.47-0.73-2.47-2.03 c0-1.03,1.17-1.75,3.33-1.75c1.86,0,4.13,0.63,4.21,0.65V43.33L60.58,43.33z M106.11,53.71c0,3.11-2.38,5.62-5.57,5.62 c-3.2,0-5.57-2.51-5.57-5.62c0-3.1,2.37-5.62,5.57-5.62C103.73,48.09,106.11,50.61,106.11,53.71L106.11,53.71L106.11,53.71z M100.54,42.66c-6.57,0-11.28,4.95-11.28,11.05c0,6.11,4.71,11.06,11.28,11.06s11.28-4.95,11.28-11.06 C111.82,47.61,107.1,42.66,100.54,42.66L100.54,42.66L100.54,42.66z M40.14,64.39h-5.39V43.03h5.39V64.39L40.14,64.39z M40.14,64.39L40.14,64.39L40.14,64.39L40.14,64.39z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M27.35,43.42c-0.51-0.15-2.38-0.77-4.91-0.77c-6.56,0-11.37,4.67-11.37,11.05c0,6.88,5.31,11.06,11.37,11.06 c2.41,0,4.24-0.57,4.91-0.76v-5.73c-0.23,0.13-1.99,1.13-4.53,1.13c-3.59,0-5.91-2.53-5.91-5.7c0-3.27,2.42-5.7,5.91-5.7 c2.58,0,4.31,1.03,4.53,1.14V43.42L27.35,43.42z M27.35,43.42L27.35,43.42L27.35,43.42L27.35,43.42z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M83.59,43.42c-0.51-0.15-2.38-0.77-4.91-0.77c-6.56,0-11.37,4.67-11.37,11.05c0,6.88,5.31,11.06,11.37,11.06 c2.41,0,4.24-0.57,4.91-0.76v-5.73c-0.23,0.13-1.99,1.13-4.53,1.13c-3.59,0-5.9-2.53-5.9-5.7c0-3.27,2.41-5.7,5.9-5.7 c2.58,0,4.31,1.03,4.53,1.14V43.42L83.59,43.42z M83.59,43.42L83.59,43.42L83.59,43.42L83.59,43.42z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M34.74,2.67c0-1.47-1.2-2.67-2.68-2.67c-1.47,0-2.67,1.19-2.67,2.67v28.35c0,1.48,1.2,2.67,2.67,2.67 c1.47,0,2.68-1.19,2.68-2.67V2.67L34.74,2.67z M20.04,12.73c0-1.47-1.2-2.67-2.67-2.67c-1.47,0-2.67,1.2-2.67,2.67v12.96 c0,1.48,1.2,2.67,2.67,2.67c1.47,0,2.67-1.19,2.67-2.67V12.73L20.04,12.73z M5.35,20.09c0-1.47-1.2-2.66-2.67-2.66 C1.2,17.42,0,18.62,0,20.09v5.61c0,1.48,1.2,2.67,2.67,2.67c1.47,0,2.68-1.19,2.68-2.67L5.35,20.09L5.35,20.09z M5.35,20.09 L5.35,20.09L5.35,20.09L5.35,20.09z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M29.39,2.67c0-1.47,1.2-2.67,2.68-2.67c1.47,0,2.68,1.19,2.68,2.67v28.35c0,1.48-1.2,2.67-2.68,2.67 c-1.47,0-2.68-1.19-2.68-2.67V2.67L29.39,2.67z M44.08,12.73c0-1.47,1.2-2.67,2.67-2.67s2.68,1.2,2.68,2.67v12.96 c0,1.48-1.2,2.67-2.68,2.67s-2.67-1.19-2.67-2.67V12.73L44.08,12.73z M58.77,20.09c0-1.47,1.2-2.66,2.67-2.66 c1.47,0,2.67,1.19,2.67,2.66v5.61c0,1.48-1.2,2.67-2.67,2.67c-1.47,0-2.67-1.19-2.67-2.67V20.09L58.77,20.09z M58.77,20.09 L58.77,20.09L58.77,20.09L58.77,20.09z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M88.14,2.67c0-1.47,1.2-2.67,2.68-2.67s2.68,1.19,2.68,2.67v28.35c0,1.48-1.2,2.67-2.68,2.67 s-2.68-1.19-2.68-2.67V2.67L88.14,2.67z M102.84,12.73c0-1.47,1.2-2.67,2.67-2.67c1.47,0,2.68,1.2,2.68,2.67v12.96 c0,1.48-1.2,2.67-2.68,2.67c-1.47,0-2.67-1.19-2.67-2.67V12.73L102.84,12.73z M117.53,20.09c0-1.47,1.2-2.66,2.67-2.66 s2.68,1.19,2.68,2.66v5.61c0,1.48-1.2,2.67-2.68,2.67s-2.67-1.19-2.67-2.67V20.09L117.53,20.09z M117.53,20.09L117.53,20.09 L117.53,20.09L117.53,20.09z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M93.49,2.67c0-1.47-1.2-2.67-2.68-2.67s-2.68,1.19-2.68,2.67v28.35c0,1.48,1.2,2.67,2.68,2.67 s2.68-1.19,2.68-2.67V2.67L93.49,2.67z M78.8,12.73c0-1.47-1.2-2.67-2.68-2.67s-2.68,1.2-2.68,2.67v12.96 c0,1.48,1.2,2.67,2.68,2.67s2.68-1.19,2.68-2.67V12.73L78.8,12.73z M64.11,20.09c0-1.47-1.2-2.66-2.68-2.66s-2.68,1.19-2.68,2.66 v5.61c0,1.48,1.2,2.67,2.68,2.67c1.47,0,2.68-1.19,2.68-2.67V20.09L64.11,20.09z M64.11,20.09L64.11,20.09L64.11,20.09L64.11,20.09 z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <div class="trusted__content-col">
+            <img src="./assets/img/trust_3.png" alt="" />
+          </div>
+          <div class="trusted__content-col">
+            <img src="./assets/img/trust_4.png" alt="" />
+          </div>
+          <div class="trusted__content-col">
+            <img src="./assets/img/trust_5.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="wrapper">
+        <div class="info__img">
+          <a href="">
+            <div>
+              <svg></svg>
+            </div>
+            <div>
+              <svg></svg>
+              <div>
+                <h3></h3>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div>
+              <svg></svg>
+              <h3></h3>
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </a>
+        </div>
+        <div class="info__content"></div>
+      </div>
+    </section>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

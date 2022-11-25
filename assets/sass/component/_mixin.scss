@@ -1,5 +1,26 @@
+@mixin bp($p) {
+  @if $p == baby {
+    @media (max-width: 46.1875em) {
+      @content;
+    }
+  } @else if $p == mama {
+    @media (min-width: 46.25em) and (max-width: 63.9375em) {
+      @content;
+    }
+  } @else if $p == mamababy {
+    @media (max-width: 63.9375em) {
+      @content;
+    }
+  } @else if $p == papa {
+    @media (min-width: 64em) {
+      @content;
+    }
+  }
+}
+
 @mixin button($p, $fs, $lh) {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
 
   padding: $p;
@@ -43,5 +64,120 @@
   transition: $transition-smooth;
   &:hover {
     color: rgb(68, 68, 72);
+  }
+}
+
+@mixin ham($svg-name) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  aspect-ratio: 1;
+  transition: $transition-smooth;
+  .#{$svg-name} {
+    position: relative;
+    width: 70%;
+    height: 1px;
+    border-radius: 9999px;
+    background-color: $color-text;
+    transition: $transition-smooth;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      left: 0;
+      right: 0;
+      border-radius: 9999px;
+      background-color: $color-text;
+      transition: $transition-smooth;
+    }
+    &::before {
+      transform: translateY(-8px);
+    }
+    &::after {
+      transform: translateY(8px);
+    }
+  }
+  &.open .#{$svg-name} {
+    transform: translateX(-50px);
+    background: transparent;
+    &::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    &::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+  @include bp(papa) {
+    display: none;
+  }
+}
+
+@mixin product-item($tray-name) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 48px 32px;
+  text-align: center;
+  transition: $transition-smooth;
+
+  &:hover {
+    background-color: rgba(245, 246, 250, 1);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 78%;
+    opacity: 0.75;
+    background-color: rgb(225, 226, 230);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &.hide-separate::after {
+    display: none;
+  }
+
+  .#{$tray-name}__img {
+    flex: 1 1 0;
+  }
+
+  .#{$tray-name}__title {
+    display: inline-block;
+    margin-top: 24px;
+    color: $color-text;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  .#{$tray-name}__desc {
+    margin-top: 12px;
+  }
+
+  .#{$tray-name}__learn {
+    display: inline-block;
+    margin-top: 16px;
+    color: $color-text;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+}
+
+@mixin trusted-item($var, $w, $h) {
+  .trusted__content-col:nth-child(#{$var}) {
+    img {
+      width: $w;
+      height: $h;
+    }
   }
 }

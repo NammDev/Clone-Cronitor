@@ -5,17 +5,24 @@
   > .grid {
     z-index: 20;
     position: relative;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.04);
-    background-color: white;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 4%);
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  flex: 1;
   padding: 16px 32px;
+  height: 64px;
 
   &__logo {
     a {
@@ -59,11 +66,20 @@
       @include button(1rem 2.4rem, 1.6rem, 2.4rem);
       margin-left: 24px;
     }
+    @include bp(mamababy) {
+      display: none;
+    }
+  }
+
+  &__ham {
+    @include ham(navbar__ham-icon);
   }
 }
 
+/* Header Product List */
 .product-tray {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -75,7 +91,7 @@
 
   &.open {
     display: block;
-    animation: slowShow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slowShow 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .grid {
@@ -91,60 +107,119 @@
   }
 
   .product-item {
-    position: relative;
+    @include product-item(product-item);
+  }
+}
+
+/* Header Product List for Mobile*/
+.nav-mobile {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+
+  width: 100%;
+  height: 100vh;
+  padding: 112px 32px 16px 32px;
+
+  background-color: white;
+  color: rgba(68, 68, 72, 1);
+
+  &.open {
+    display: flex;
+    animation: slowShowFromRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &-top {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    padding: 48px 32px;
-    text-align: center;
+    padding-bottom: 32px;
+    .nav-mobile-top__link {
+      @include text($color-text, 600, 24px, 32px);
+      margin-top: 32px;
+    }
+  }
+  &-bottom {
+    display: flex;
+    padding: 16px 0;
+    &__start {
+      @include button(10px 24px, 16px, 24px);
+    }
+    &__login {
+      @include button(10px 24px, 16px, 24px);
+      margin-left: 24px;
+      background-color: white;
+      border-color: rgba(99, 100, 103);
+      color: $color-text;
+    }
+  }
+}
+
+.nav-mobile__dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include text($color-text, 600, 24px, 32px);
+  svg {
     transition: $transition-smooth;
-    &:hover {
-      background-color: rgba(245, 246, 250, 1);
+    width: 24px;
+    transform: rotate(90deg);
+  }
+  &.open {
+    svg {
+      transform: rotate(0);
+    }
+  }
+}
+
+.nav-mobile__product-tray {
+  margin-top: 32px;
+  &.close {
+    display: none;
+  }
+  .container {
+  }
+}
+
+.product-item-mb {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 32px 0;
+  border-top: 2px solid rgba(225, 226, 230, 0.5);
+
+  &:first-child {
+    padding: 0 0 32px 0;
+    border: none;
+  }
+
+  &__img {
+    margin-right: 12px;
+    width: 112px;
+    height: 112px;
+    svg {
+      max-width: unset;
+      width: unset;
+      height: unset;
+    }
+  }
+
+  .product-item-mb__content {
+    margin-left: 32px;
+    .product-item-mb__title {
+      @include text($color-text, 700, 20px, 28px);
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      display: block;
-      width: 1px;
-      height: 78%;
-      opacity: 0.75;
-      background-color: rgb(225, 226, 230);
-      transform: translateX(-50%) translateY(-50%);
-    }
-
-    &.hide-separate::after {
-      display: none;
-    }
-
-    &__img {
-      flex: 1 1 0;
-    }
-
-    &__title {
-      display: inline-block;
-      margin-top: 24px;
-      color: $color-text;
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: 700;
-    }
-
-    &__desc {
-      margin-top: 12px;
-    }
-
-    &__learn {
-      display: inline-block;
-      margin-top: 16px;
-      color: $color-text;
-      font-size: 18px;
-      line-height: 28px;
-      font-weight: 600;
+    .product-item-mb__desc {
+      margin-top: 8px;
     }
   }
 }
@@ -178,16 +253,13 @@
 .banner__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 256px 0 224px 0;
   gap: 48px;
-  @include bp(mamababy) {
-    flex-direction: column;
-    padding: 0;
-  }
+  //Left Content
   .banner__container {
     max-width: 48.125%;
     padding-left: 32px;
@@ -209,25 +281,19 @@
         @include button(1.6rem 3.6rem, 2rem, 2.8rem);
       }
     }
-    @include bp(mama) {
-      padding: 128px 0 48px 32px;
-      max-width: 576px;
-    }
-    @include bp(baby) {
-    }
   }
 
+  // Right Content
   .banner__img {
     max-width: 48.125%;
     flex: 1;
     padding: 0 32px;
+  }
 
-    .position {
-      position: relative;
-      margin: 0 20px;
-    }
-
-    &-feed {
+  .position {
+    position: relative;
+    margin: 0 20px;
+    .banner__img-feed {
       width: 512px;
       height: 320px;
       img {
@@ -236,7 +302,7 @@
       }
     }
 
-    &-noti {
+    .banner__img-noti {
       position: absolute;
       top: -32px;
       right: -16px;
@@ -244,12 +310,34 @@
         margin-top: -16px;
       }
     }
-    @include bp(mama) {
-      padding: 64px 32px 48px 32px;
-      max-width: 100%;
-      background-color: $color-primary;
-    }
-    @include bp(baby) {
+  }
+}
+
+/* Trusted */
+.trusted {
+  padding: 48px 0;
+  background-color: rgb(245, 246, 250);
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    padding: 0 32px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 16px;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 -8px;
+      .trusted__content-col {
+        padding: 8px;
+      }
+      @include trusted-item(1, 169px, 29px);
+      @include trusted-item(3, 227px, 44px);
+      @include trusted-item(4, 160px, 26px);
+      @include trusted-item(5, 175px, 39px);
     }
   }
 }
