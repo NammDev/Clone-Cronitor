@@ -181,3 +181,31 @@
     }
   }
 }
+
+@mixin info-cart($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 320px;
+  padding: 16px 48px 16px 24px;
+  background-color: white;
+  box-shadow: 2px 4px 12px rgba(6, 33, 102, 0.15);
+  border-radius: 8px;
+  svg {
+    width: 48px;
+    flex-shrink: 0;
+  }
+  &-content {
+    margin-left: 16px;
+    h3 {
+      @include text(rgb(68, 68, 72), 700, 20px, 20px);
+    }
+    p {
+      margin-top: 8px;
+      @include text(rgb(99, 100, 103), 400, 14px, 20px);
+    }
+  }
+}

@@ -341,3 +341,87 @@
     }
   }
 }
+
+/* Info Section */
+.info {
+  padding: 144px 0;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 160px;
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 32px;
+    margin: 0 auto;
+    .wrapper-left {
+      flex: 1;
+    }
+    .info-content {
+      flex: 1;
+    }
+  }
+}
+
+.info-image {
+  position: relative;
+  &__back {
+    max-width: 528px;
+  }
+  &__error {
+    @include info-cart(264px, 112px);
+    @include bp(mamababy) {
+      display: none;
+    }
+  }
+  &__success {
+    @include info-cart(132px, 0px);
+    p.margin-none {
+      margin-top: 0;
+    }
+  }
+}
+
+.info-content {
+  &__title {
+    width: min-content;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    svg {
+      width: unset;
+      max-width: unset;
+    }
+    h3 {
+      margin-left: 8px;
+      @include text(rgb(99, 100, 103), 600, 18px, 28px);
+    }
+  }
+  h2 {
+    @include text($color-text, 800, 36px, 40px);
+    margin-top: 16px;
+  }
+  &__desc {
+    @include text(rgb(68, 68, 72), 400, 18px, 28px);
+    margin-top: 24px;
+  }
+  &__links {
+    margin-top: 20px;
+    @include text(rgb(68, 68, 72), 400, 18px, 28px);
+    .info-content__item {
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      svg {
+        width: 16px;
+        margin-right: 12px;
+      }
+    }
+  }
+  &__btn {
+    @include button(10px 24px, 16px, 24px);
+    margin-top: 32px;
+    display: block;
+  }
+}
